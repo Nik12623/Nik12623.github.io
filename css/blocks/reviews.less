@@ -1,0 +1,82 @@
+// main: ../style.less
+
+.reviews
+{
+    position: relative;
+    padding: 0 7.33rem;
+}
+
+.reviews__item
+{
+    padding-left: 16rem;
+    position: relative;
+}
+
+.reviews__photo
+{
+    position: absolute;
+    left: 0;
+    top: -25spx;
+    z-index: 1;
+}
+
+.rewiews__text
+{
+    font-weight: 300;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: @gray;
+    margin-top: 0.33rem;
+    margin-bottom: 2.2rem;
+}
+
+.rewiews__author
+{
+    font-size: 1.6rem;
+    color: @black;
+    font-family: 'Kaushan Script', cursive;
+    
+    &:before
+    {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 4rem;
+        height: 0.2rem;
+        background-color: @red;
+        
+        margin-right: 10px;
+    }
+}
+
+.reviews__btn
+{
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    &:after
+    {
+        content: "";
+        display: block;
+        height: 16px;
+        width: 16px;
+        border-right: 2px solid #cbcbcb;
+        border-top: 2px solid #cbcbcb;
+    }
+    
+    &--prev
+    {
+        left: 0;
+        transform: rotate(225deg);
+    }
+    
+    &--next
+    {
+        right: 0;
+        transform: rotate(45deg);
+    }
+}

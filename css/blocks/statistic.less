@@ -1,0 +1,40 @@
+// main: ../style.less
+
+.statistic
+{
+    background-color: @green;
+}
+
+.stat
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat__item
+{   
+    border-right: solid 1px #b5eae0;
+    flex: 1 1 0;
+    text-align: center;
+    padding: 2.8rem 1.66rem;
+    color: @white;
+    
+    &:first-child
+    {
+        border-left: solid 1px #b5eae0;
+    }
+}
+
+.stat__count
+{
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.stat__text
+{
+    font-size: 0.93rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}

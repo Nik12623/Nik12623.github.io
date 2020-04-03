@@ -1,0 +1,69 @@
+// main: ../style.less
+
+.section
+{
+    padding: 6.06rem 0;
+    
+    &--devices
+    {
+        background: url(../images/devices-bg.jpg) center no-repeat;
+        background-size: cover;
+        padding-bottom: 0;
+    }
+    
+    &--gray
+    {
+        background-color: #f8f8f8;
+    }
+    
+    &--white
+    {
+        padding: 3rem 0 9rem;
+    }
+    
+    &--clients
+    {
+        background: url(../images/clients-bg.jpg) center no-repeat;
+        background-size: cover;
+    }
+    
+}
+
+.section__header
+{
+    width: 100%;
+    max-width: 950px;
+    margin : 0 auto 6.66rem;
+    text-align: center;
+}
+
+.section__suptitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.53rem;
+}
+
+.section__title
+{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    
+    &:after{
+        content: "";
+        display: block;
+        max-width: 4rem;
+        height: 0.2rem;
+        background-color: @red;
+        margin: 2.66rem auto 3.13rem;
+    }
+}
+
+.section__text
+{
+    line-height: 1.6;
+    color: @gray;
+    font-size: 1rem;
+}

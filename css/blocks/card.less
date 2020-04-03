@@ -1,0 +1,90 @@
+// main: ../style.less
+
+
+.card
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__inner
+{
+    width: 380px;
+    
+    
+    &:hover
+    {
+        .card__img
+        {
+            transform: translate3d(-10px, -10px, 0);
+            
+            img
+            {
+                opacity: 0.1;
+            }
+        }
+        
+        .card__text
+        {
+            opacity: 1;
+        }
+    }
+}
+
+.card__inner
+{
+    background-color: @green;
+    
+    position: relative;
+}
+.card__img
+{
+    background: linear-gradient(to bottom, #d98080, #f5e28e);
+    
+    transition: transform 0.2s linear;
+    
+    img
+    {
+        transition: opacity 0.1s linear;
+        display: block;
+    }   
+}
+
+.card__text
+{
+    color: @white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity 0.2s linear;
+}
+
+.card__name
+{
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 0.93rem;
+    text-transform: uppercase; 
+    color: @black;
+    text-align: center;
+}
+
+.card__prof
+{
+    margin-top: 1rem;
+    color: @gray;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 300;
+}

@@ -1,0 +1,85 @@
+// main: ../style.less
+
+
+.accordion__item
+{
+    border: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+    
+    &.active
+    {
+        .accordion__content
+        {
+            display: block;
+        }
+        
+        .accordion__header
+        {
+            border-bottom-color: #e5e5e5;
+            &:after
+            {
+                transform: translateY(-50%) rotate(-45deg);
+                margin-top: 7px;
+            }
+        }
+    }
+}
+
+.accordion__header
+{   
+    position: relative;
+    border-bottom: 1px solid transparent;
+    padding: 1.33rem 3.66rem 1.33rem 1.33rem;
+    cursor: pointer;
+    
+    &:after
+    {
+        content: "";
+        display: block;
+        height: 16px;
+        width: 16px;
+        border-right: 2px solid #cbcbcb;
+        border-top: 2px solid #cbcbcb;
+        
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        z-index: 1;
+        
+        transform: translateY(-50%) rotate(135deg);
+        margin-top: -6px;
+
+        
+    }
+}
+
+.accordion__icon
+{    
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 1;
+    
+    transform: translateY(-50%);
+}
+
+.accordion__title
+{
+    font-size: 0.93rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 3rem;
+}
+
+.accordion__content
+{
+    display: none;
+    font-size: 0.93rem;
+    color: @gray;
+    font-style: italic;
+    line-height: 1.6;
+    font-weight: 300;
+    padding: 1rem 3.66rem 1rem 1.33rem;
+}
+
+

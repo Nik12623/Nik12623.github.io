@@ -1,0 +1,34 @@
+// main: ../style.less
+
+.social
+{
+    display: flex;
+    justify-content: center;
+}
+
+.social__item
+{
+    height: 55px;
+    width: 55px;
+    background-color: #f5e28e;
+    border-right: 1px solid #d98080;
+    text-decoration: none;
+    
+    padding: 12px 10px;
+    line-height: 1;
+    font-size: 30px;
+    color: #d98080;
+    
+    transition: background 0.1s linear, color 0.1s linear;
+    
+    &:last-child
+    {
+        border-right: none;
+    }
+    
+    &:hover
+    {
+        background-color: #d98080;
+        color: @white;
+    }
+}
