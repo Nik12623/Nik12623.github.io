@@ -1,93 +1,77 @@
 // main: ../style.less
 
-
-
-
-.intro{
-   @media @mobile
-    {
-        margin-top: 100px;
-    } 
-}
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
-
-
+    height: 100vh;
+    width: 100%;
+    background: url("../images/intro.jpg") center no-repeat; 
+    background-size: cover;
+    
+}
 
 .intro__inner
 {
-    display: flex;
-    border-bottom: 1px solid fade(@gray, 30%);
-    padding-top: 6.6rem; 
-    padding-bottom: 8rem;
-    background: url("../img/photo.png") right bottom no-repeat;
-    
-    @media @notebook
-    {
-        background-size: 480px auto; 
-    }
-    
-    @media @tablet
-    {
-        background-size: 325px auto;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    @media @mobile
-    {
-        background-size: 275px auto;
-    }
-    
-    @media @mobile-sm
-    {
-        background: none;
-    }
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.intro__content
+.intro__suptitle
 {
-    width: 50%;
+    font-size: 4.8rem;
+    color: @white;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 2.8rem;
     
-    @media @mobile
-    {
-        width: 60%;   
+    @media @notebook{
+        font-size: 4rem;
     }
     
-    @media @mobile-sm
-    {
-        width: 100%;
+    @media @tablet{
+        font-size: 2.5rem;
     }
-}
-
-.intro__sybtitle
-{
-    font-size: 2.13rem;
-    font-weight: 200;
-    color: @black;
     
-    @media @tablet
-    {
+    @media @mobile{
         font-size: 1.5rem;
     }
+    
+    
 }
 
 .intro__title
 {
-    margin-bottom: 5px;
-    font-size: 3rem;
-    color: @black;
-    font-weight: 700;
+    font-size: 10rem;
+    color: @white;
+    text-transform: uppercase;
+    line-height: 1;
     
-    @media @tablet
+    &:after
     {
-        font-size: 2rem;
+        content: "";
+        display: block;
+        max-width: 4rem;
+        height: 0.2rem;
+        background-color: @white;
+        margin: 4rem auto 4rem;
+    }
+    
+    @media @notebook{
+        font-size: 8rem;
+    } 
+    
+    @media @tablet{
+        font-size: 5rem;
+    }
+    
+    @media @mobile{
+        font-size: 2.66rem;
     }
 }
 
-.intro__text
-{
-    font-size: 1.2rem;
-    color: fade(@black, 70%);
-    margin-bottom: 25px;
-}
+
 

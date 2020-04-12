@@ -1,0 +1,38 @@
+// main: ../style.less
+
+.instagram
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    @media @tablet{
+        justify-content: flex-start;
+    }
+}
+
+.instagram__item
+{
+    width: 33%;
+    border-bottom: 1px solid @white;
+    
+    img
+    {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    
+     @media @tablet{
+        width: auto;
+         border-right: 1px solid #fff;
+    }
+    
+}
+
+.instagram__footer
+{
+    margin-top: 1.2rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+}

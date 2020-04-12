@@ -4,13 +4,6 @@
 {
     padding: 6.06rem 0;
     
-    &--devices
-    {
-        background: url(../images/devices-bg.jpg) center no-repeat;
-        background-size: cover;
-        padding-bottom: 0;
-    }
-    
     &--gray
     {
         background-color: #f8f8f8;
@@ -27,6 +20,35 @@
         background-size: cover;
     }
     
+    &--map
+    {
+        padding: 3.7rem;
+        background: url(../images/map.jpg) center no-repeat;
+        background-size: cover;
+        
+    }
+    
+    @media @tablet{
+        padding: 2.66rem 0;
+         
+            &--wedo
+            {
+                padding: 4rem 0 2.66rem;
+            }
+        
+    }
+    
+    &--devices
+    {
+        background: url(../images/devices-bg.jpg) center no-repeat;
+        background-size: cover;
+        padding-bottom: 0;
+        
+        @media @tablet{
+            padding-bottom: 0;
+        }
+    }
+    
 }
 
 .section__header
@@ -35,6 +57,10 @@
     max-width: 950px;
     margin : 0 auto 6.66rem;
     text-align: center;
+    
+    @media @tablet{
+        margin : 0 auto 3.33rem;
+    }
 }
 
 .section__suptitle
@@ -43,6 +69,10 @@
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 1.53rem;
+    
+    @media @tablet{
+        font-size: 1.3rem;
+    }
 }
 
 .section__title
@@ -58,6 +88,15 @@
         height: 0.2rem;
         background-color: @red;
         margin: 2.66rem auto 3.13rem;
+        
+        @media @tablet{
+        margin: 1.5rem auto;
+    }
+        
+    }
+    
+    @media @tablet{
+        font-size: 1.7rem;
     }
 }
 

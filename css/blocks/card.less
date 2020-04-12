@@ -3,14 +3,21 @@
 
 .card
 {
+    margin: 80px -15px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @media @tablet{
+        justify-content: center;
+        margin-top: 3.33rem;
+    }
 }
 
-.card__inner
+.card__item
 {
-    width: 380px;
-    
+    width: 33.33333%;
+    padding: 0 15px;
     
     &:hover
     {
@@ -27,6 +34,17 @@
         .card__text
         {
             opacity: 1;
+        }
+    }
+    
+    @media @tablet{
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 2rem;
+        
+        &:last-child
+        {
+            margin-bottom: 0;
         }
     }
 }
@@ -47,6 +65,8 @@
     {
         transition: opacity 0.1s linear;
         display: block;
+        max-width: 100%;
+        height: auto;
     }   
 }
 

@@ -3,14 +3,39 @@
 .services
 {
     display: flex;
+    flex-wrap: wrap;
+    
+    @media @mobile{
+        justify-content: center;
+    }
 }
 
 .services__item
 {
-    flex: 1 1 0;
-    padding-left: 5.66rem;
-    padding-right: 2.33rem;
+    width: 33.33333%;
+    padding: 0 2.33rem 2rem 5.66rem;
     position: relative;
+    margin-bottom: 2rem;
+    
+    &--border
+    {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    @media @tablet{
+        width: 50%;
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    @media @mobile{
+        width: 100%;
+        padding-left: 3.5rem;
+        padding-right: 0;
+        max-width: 400px;
+    }
+    
+    
 }
 
 .services__icon
@@ -19,6 +44,10 @@
     left: 1.86rem;
     top: 0;
     z-index: 1;
+    
+    @media @mobile{
+        left: 0;
+    }
 }
 
 .services__title

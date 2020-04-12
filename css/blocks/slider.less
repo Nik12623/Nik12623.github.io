@@ -47,10 +47,22 @@
         top: -3px;
         left: 0;
         z-index: 1;
+    
+    @media @tablet
+    {
+        width: 30%;
+    }
 }
 
 .slider__num
 {
     font-size: 1.6rem;
     font-weight: 700;
+}
+
+.slider__text
+{
+    @media @tablet{
+       display: none; 
+    }
 }

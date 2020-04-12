@@ -4,9 +4,28 @@
 .wedo
 {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item
 {
     width: 50%;
+    
+    @media @tablet
+    {
+        width: 100%;
+    }
+    
+    .wedo__bg
+    {
+        padding: 0 15px;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        
+        @media @tablet{
+            display: none;
+        }
+    }
 }

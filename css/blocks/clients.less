@@ -4,6 +4,12 @@
 {
     display: flex; 
     flex-wrap: wrap;
+    
+    @media @tablet{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+   
 }
 
 .clients__item
@@ -13,6 +19,15 @@
     position: relative;
     padding-bottom: 65px;
 
+    @media @tablet{
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    @media @mobile{
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 .clients__photo
@@ -21,6 +36,10 @@
     left: 2.66rem;
     top: 0;
     z-index: 1;
+    
+    @media @mobile{
+        position: static;
+    }
 }
 
 .clients__name
@@ -47,6 +66,10 @@
         background-color: @red;
         
         margin: 13px 0;
+        
+        @media @mobile{
+        margin: 15px auto;
+    }
     }
 }
 

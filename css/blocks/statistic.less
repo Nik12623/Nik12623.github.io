@@ -8,7 +8,12 @@
 .stat
 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    
+    @media @tablet{
+        justify-content: center;
+    }
 }
 
 .stat__item
@@ -22,7 +27,31 @@
     &:first-child
     {
         border-left: solid 1px #b5eae0;
+        
+        @media @tablet{
+         border: 0;
+         
     }
+    }
+    
+     @media @tablet{
+         flex: none;
+         width: 33.33333%;
+         border: 0;
+         padding: 2.2rem 1.66rem;
+
+    }
+    
+    @media @mobile{
+         width: 100%;
+         border-bottom: 1px solid #b5eae0;
+        
+        &:last-child
+        {
+            border-bottom: 0;
+        }
+    }
+    
 }
 
 .stat__count
@@ -30,6 +59,10 @@
     font-size: 4.8rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
+    
+    @media @mobile-sm{
+        font-size: 3.5rem;
+    }
 }
 
 .stat__text
