@@ -1,3 +1,4 @@
+// compress: true
 @import "vars";
 
 html
@@ -9,49 +10,52 @@ body
 {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    
     font-size: 1rem;
-    color: @black;  
+    color: @black;
+    
+    &.no-scroll
+    {
+        overflow: hidden;
+    }
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    margin: 0;
 }
 
 *,
 *:before,
-*:after
-{
+*:after {
     box-sizing: border-box;
 }
 
-hr
-{
-    width: 100%;
-    display: block;
-    height: 1px;
-    margin: 2.33rem 0;
-    border: 0;
-    background-color: #e5e5e5;
-}
 
-h1,h2,h3,h4,h5,h6{
-   margin: 0; 
-} 
+/* Vendor */
+@import "vendor/slick";
 
 /* Blocks */
-
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/user";
 @import "blocks/nav";
 @import "blocks/intro";
-@import "blocks/btn";
-@import "blocks/slider";
-@import "blocks/section";
-@import "blocks/card";
-@import "blocks/statistic";
-@import "blocks/services";
-@import "blocks/devices";
-@import "blocks/wedo";
-@import "blocks/accordion";
-@import "blocks/reviews";
 @import "blocks/social";
-@import "blocks/logos";
+@import "blocks/btn";
 @import "blocks/works";
-@import "blocks/clients";
+@import "blocks/portfolio";
+@import "blocks/work";
+@import "blocks/healters";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/news";
+@import "blocks/articles";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-work";
+@import "blocks/timeline";
+@import "blocks/progress-bar";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/burger";
+

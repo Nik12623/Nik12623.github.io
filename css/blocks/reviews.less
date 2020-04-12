@@ -1,82 +1,74 @@
 // main: ../style.less
-
+    
 .reviews
 {
+    padding: 4.6rem 0;
+    background: #332F30 url("../img/reviews.png") center no-repeat;
     position: relative;
-    padding: 0 7.33rem;
 }
 
 .reviews__item
 {
-    padding-left: 16rem;
-    position: relative;
+    width: 100%;
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.reviews__text
+{
+    font-size: 0.94rem;
+    line-height: 2.2;
+    color: @white;
+    text-align: center;
+}
+
+.reviews__author
+{
+    margin-top: -51px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
 }
 
 .reviews__photo
 {
-    position: absolute;
-    left: 0;
-    top: -25spx;
-    z-index: 1;
+    display: block;
+    margin: 0 auto 0.6rem;
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    border: 4px solid #efefef;   
 }
 
-.rewiews__text
+.reviews__name
 {
-    font-weight: 300;
-    font-size: 1.6rem;
-    font-style: italic;
-    color: @gray;
-    margin-top: 0.33rem;
-    margin-bottom: 2.2rem;
-}
-
-.rewiews__author
-{
-    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.06rem;
     color: @black;
-    font-family: 'Kaushan Script', cursive;
+    font-weight: 700;
+}
+
+.reviews__company
+{
+    margin-bottom: 0.4rem;
+    color: @gray;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.reviews__star
+{
+    width: 13px;
+    height: 13px;
     
-    &:before
+    &--unactive
     {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        width: 4rem;
-        height: 0.2rem;
-        background-color: @red;
-        
-        margin-right: 10px;
+        opacity: 0.5;
     }
 }
 
-.reviews__btn
-{
-    font-size: 0;
-    color: transparent;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    &:after
-    {
-        content: "";
-        display: block;
-        height: 16px;
-        width: 16px;
-        border-right: 2px solid #cbcbcb;
-        border-top: 2px solid #cbcbcb;
-    }
-    
-    &--prev
-    {
-        left: 0;
-        transform: rotate(225deg);
-    }
-    
-    &--next
-    {
-        right: 0;
-        transform: rotate(45deg);
-    }
-}
+
+
