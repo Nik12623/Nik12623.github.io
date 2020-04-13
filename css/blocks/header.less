@@ -5,9 +5,29 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
+    padding-top: 30px;
     
+    &.fixed{
+        padding: 10px 0;
+        position: fixed;
+        background-color: #eb8b8d;
+        top: -1px;
+        left: 0;
+        right: 0;
+        transform: translate3d(0, 0, 0);
+        
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media @tablet{
+        padding: 10px 0;
+    }
+    
+    &.active{
+        background-color: #eb8b8d;
+    }
 }
 
 .header__inner
@@ -15,11 +35,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 28px;
 }
 
 .header__logo
 {
+    display: block;
+    cursor: pointer;
     font-size: 2rem;
     color: @white;
     font-weight: 700;

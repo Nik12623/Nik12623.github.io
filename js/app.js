@@ -1,118 +1,68 @@
-$(function()
-  
-  /*const worksSlider = $('[data-slider="slick"]');*/
-  
-  /* -------- Filter ------ */
- {
-    let filter = $("[data-filter]");
+$(function() {
     
-    filter.on("click", function(event){
-        event.preventDefault();
+    var header = $("#header"),
+        introH = $("#intro").innerHeight(),
+        scrollOffset = $(window).scrollTop(); 
+    
+    
+    /* Fixed Header*/
+    checkScroll(scrollOffset);
+    
+    $(window).on("scroll", function() {
+        scrollOffset = $(this).scrollTop();
         
-        let cat = $(this).data('filter');
-        
-        if(cat== 'all'){
-            $("[data-cat]").removeClass("hide");
+        checkScroll(scrollOffset);
+    });
+    
+    function checkScroll(scrollOffset) {
+        if( scrollOffset >= introH ) {
+            header.addClass("fixed");
         } else {
-            $("[data-cat]").each(function() {
-                let workCat = $(this).data('cat');
-                
-                if(workCat != cat) {
-                    $(this).addClass("hide");
-                } else {
-                    $(this).removeClass("hide");
-                }
-            });
+            header.removeClass("fixed");
         }
-    });
+    }
     
-    
-    /* ----- Modal ----- */
-    
-    const modalCall = $("[data-modal]");
-    const modalClose = $("[data-close]");
-    
-    modalCall.on("click", function(event){
+    /* Smooth scroll */
+    $("[data-scroll]").on("click", function(event){
         event.preventDefault();
         
-        let $this = $(this);
-        let modalId = $this.data('modal');
+        var $this = $(this),
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top;
         
-        $(modalId).addClass('show');
-        $("body").addClass('no-scroll');
+        $("#nav a").removeClass("active");
+        $this.addClass("active");
         
-        setTimeout(function() {
-            $(modalId).find(".modal__dialog").css({
-                transform: "rotateX(0)"
-            });
-        }, 200);
-                  
-        $('[data-slider="slick"]').slick('setPosition');
+        $("html, body").animate({
+            scrollTop: blockOffset
+        }, 500);
     });
     
-    modalClose.on("click", function(event){
+    /* Menu Nav-toggle */
+    
+    $("#nav_toggle").on("click", function(event){
         event.preventDefault();
         
-        let $this = $(this);
-        let modalParent = $this.parents('.modal');
-        
-        modalParent.find(".modal__dialog").css({
-                transform: "rotateX(90deg)"
-            });
-        
-        setTimeout(function() {
-             modalParent.removeClass('show');
-        $("body").removeClass('no-scroll');
-        }, 200);
+        $(this).toggleClass("active");
+        $("#nav").toggleClass("active");
     });
     
-    $(".modal").on("click", function(event) {
-        $(this).removeClass('show');
-        $("body").removeClass('no-scroll');
-    });
-    
-    $(".modal__dialog").on("click", function(event){
-        event.stopPropagation();
-    });
-    
-        /* ----- Slider ----- */
-
-    
-   $('[data-slider="slick"]').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      arrows: false,
-      dots: true
-    });
-    
-    $(".slickPrev").on("click", function(event) {
-        event.preventDefault();
-    
-        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
-        
-    currentSlider.slick("slickPrev");
-    });
-    
-    $(".slickNext").on("click", function(event) {
-        event.preventDefault();
-    
-        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
-        
-    currentSlider.slick("slickNext");
-    });
-    
-    
-            /* ----- MobileNav ----- */
-    
-    const navToggle = $("#navToggle");
-    const nav = $("#nav");
-    
-    navToggle.on("click", function(event){
+    /* Collapse */
+    $("[data-collapse]").on("click", function(event){
         event.preventDefault();
         
-    nav.toggleClass("show");
+        var $this = $(this),
+            blockId = $this.data('collapse');
+        
+        $this.toggleClass("active");
+    });
+    
+    /* Slider */
+    $("[data-slider]").slick({
+        infinite: true,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
     });
     
 });
