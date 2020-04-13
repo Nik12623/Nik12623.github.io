@@ -528,6 +528,11 @@ h6 {
     border: 0;
   }
 }
+@media (max-width: 991px) and (max-width: 767px) {
+  .stat__item:first-child {
+    border-bottom: 1px solid #b5eae0;
+  }
+}
 @media (max-width: 991px) {
   .stat__item {
     flex: none;
