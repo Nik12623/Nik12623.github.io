@@ -201,6 +201,7 @@ h6 {
   transform: rotate(-45deg) translate3d(0, 3px, 0);
 }
 .intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,7 +209,7 @@ h6 {
   width: 100%;
   background: url("../images/intro.jpg") center no-repeat;
   background-size: cover;
-  min-height: 820px;
+  min-heiht: 820px;
 }
 @media (max-width: 991px) {
   .intro {
@@ -222,10 +223,12 @@ h6 {
   text-align: center;
 }
 .intro__suptitle {
-  font-size: 4.8rem;
+  font-size: 3rem;
+  /*4.8rem */
   color: #ffffff;
   font-family: 'Kaushan Script', cursive;
-  margin-bottom: 2.8rem;
+  margin-bottom: 1rem;
+  /* 2.8rem*/
 }
 @media (max-width: 1229px) {
   .intro__suptitle {
@@ -243,7 +246,8 @@ h6 {
   }
 }
 .intro__title {
-  font-size: 10rem;
+  font-size: 6rem;
+  /*10rem*/
   color: #ffffff;
   text-transform: uppercase;
   line-height: 1;
@@ -254,7 +258,8 @@ h6 {
   max-width: 4rem;
   height: 0.2rem;
   background-color: #ffffff;
-  margin: 4rem auto 4rem;
+  margin: 2rem auto 2rem;
+  /* 4rem auto 4rem*/
 }
 @media (max-width: 1229px) {
   .intro__title {
@@ -290,7 +295,7 @@ h6 {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
   z-index: 1;
 }
 .slider__inner {
@@ -304,7 +309,8 @@ h6 {
   color: #ffffff;
   opacity: 0.7;
   font-weight: 400;
-  padding: 1.3rem 0;
+  padding: 0.5rem 0;
+  /*1.3 rem*/
   border-top: 0.2rem solid #ffffff;
 }
 .slider__item.active {
